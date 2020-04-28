@@ -1,0 +1,19 @@
+html, body, #root {
+  height: 100%;
+}
+.dnd_page {
+  display: flex;
+  height: 100%;
+}
+.dnd_page_left {
+  width: 200px;
+}
+.dnd_page_right {
+  width: 200px;
+}
+.dnd_page_center {
+  flex: 1;
+  height: 100%;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
