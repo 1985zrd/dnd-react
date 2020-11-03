@@ -1,0 +1,30 @@
+/*宫格一行两个样式*/
+.gong-ge__inline__box {
+  display: inline-block;
+  width: 49%;
+  &:nth-child(odd) {
+    margin-right: 2%;
+  }
+}
+
+.com__box {
+  position: relative;
+  border-bottom: 0.1px solid transparent;
+}
+
+.com__box {
+  &--child {
+    z-index: 1;
+    margin: 8px 0;
+    border-bottom: none;
+    &--active {
+      z-index: 2;
+    }
+  }
+
+  &__inner-border{
+    height:3px;
+    background:rgba(63,148,252,1);
+    border-radius:2px;
+  }
+}

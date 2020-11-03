@@ -1,0 +1,96 @@
+.upload{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  //width: 106px;
+  &__emptyData {
+    position:relative;
+    width:30px;
+    height:30px;
+    box-sizing:border-box;
+    border:1px solid #E1E0DF;
+    background:#fff;
+    &::before{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0;
+      height:0;
+      border:14px solid transparent;
+      border-left:14px solid #979797;
+      border-bottom:14px solid #979797;
+    }
+
+    &::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0;
+      height:0;
+      border:13px solid transparent;
+      border-left:13px solid #fff;
+      border-bottom:13px solid #fff;
+    }
+  }
+  &__img {
+    position:relative;
+    width:30px !important;
+    height:30px;
+    box-sizing:border-box;
+    border:1px solid #E1E0DF;
+  }
+}
+.upload__tip {
+  font-size:13px;
+  font-family: PingFangSC;
+  color: #FF3B30;
+  line-height:18px;
+  padding: 0 16px;
+}
+
+
+
+
+.ant-upload-select-picture-card i {
+  font-size: 32px;
+  color: #999;
+}
+
+.ant-upload-select-picture-card .ant-upload-text {
+  margin-top: 8px;
+  color: #666;
+}
+
+
+.ant-upload-list-picture-card .ant-upload-list-item{
+  width: 30px !important;
+  height: 30px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.ant-upload-picture-card-wrapper {
+  display: contents !important;
+}
+.ant-upload.ant-upload-select-picture-card {
+  margin: 0 0 0 9px !important;
+  padding: 0 !important;
+  border: none !important;
+  width:61px !important;
+  height:32px !important;
+  background:rgba(255,255,255,1);
+  border-radius:4px;
+  //border:1px solid rgba(212,214,217,1);
+  & > .ant-upload{
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #fff;
+    border-radius: 4px ;
+    border: 1px solid rgba(212, 214, 217, 1) ;
+  }
+}
+.ant-upload-text{
+  margin: 0  !important;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>1_1_lajitong@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="1_1_lajitong" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group-62" stroke="#FF8833">
+            <g id="Group-59" transform="translate(14.000000, 13.000000)">
+                <g id="Group-60">
+                    <polyline id="Path" points="10.9692383 2.5 10.9692383 13.5 0.969238281 13.5 0.969238281 2.5"></polyline>
+                    <path d="M0,2.5 L11.9692383,2.5" id="Line-10"></path>
+                    <polyline id="Path" points="3.64892578 2.36450195 3.64892578 0.364501953 3.64892578 0.364501953 8.64892578 0.364501953 8.64892578 2.36450195"></polyline>
+                    <path d="M7.5,5 L7.5,10.7963867" id="Line-9"></path>
+                    <path d="M4.5,5 L4.5,10.7963867" id="Line-9-Copy"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

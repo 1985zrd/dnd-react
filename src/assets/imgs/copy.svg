@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>1_3_fuzhi@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="1_3_fuzhi" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-58" stroke="#2A2827">
+            <g id="Group-56" transform="translate(14.000000, 14.000000)">
+                <rect id="Rectangle" stroke-linecap="square" x="0" y="2" width="10" height="11" rx="1"></rect>
+                <path d="M3,-4.26325641e-14 L3,-4.26325641e-14 L11,-4.26325641e-14 C11.5522847,-4.26325641e-14 12,0.44771525 12,1 L12,10" id="Path" stroke-linecap="round" stroke-linejoin="round"></path>
+                <g id="Group-57" transform="translate(1.787109, 5.008301)" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M0.5,0.5 L6,0.5" id="Line-8"></path>
+                    <path d="M0.5,3.5 L3.375,3.5" id="Line-8-Copy"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -4,7 +4,7 @@ import SortModule from './SortModule'
 function Right ({data, sortPageComponent}) {
   return (
     <div className="dnd_page_right">
-      {Object.keys(data).map((key, index) => {
+      {/* {Object.keys(data).map((key, index) => {
         return (
           <SortModule
             type={'MoveItem'}
@@ -15,7 +15,7 @@ function Right ({data, sortPageComponent}) {
             sortPageComponent={sortPageComponent}
           ></SortModule>
         )
-      })}
+      })} */}
     </div>
   )
 }

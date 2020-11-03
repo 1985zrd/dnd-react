@@ -1,44 +1,55 @@
 import React from 'react'
-import { DragSource } from 'react-dnd'
+import { useDrag } from 'react-dnd'
 import ItemTypes from '@/utils/itemTypes'
 
-function Item ({item, isDragging, connectDragSource, forbidDrag}) {
-  const opacity = isDragging ? 0.4 : 1
-  console.log(forbidDrag)
-  return (
-    <div
-      ref={connectDragSource}
-      style={{ opacity, cursor: 'move', lineHeight: '36px', borderBottom: '1px solid #e5e5e5' }}
-      className="left_item"
-    >{item.message}</div>
-  )
-  }
+import PictureModule from 'components/PictureModule/PictureModule'
+
+function Item ({item, forbidDrag, dragHandle, itemTypes, setPage}) {
   
-export default DragSource(
-  props => {
-    return ItemTypes[props.itemTypes]
-  },
-  {
-    // canDrag: props => {console.log('props.forbidDrag', props.forbidDrag); return !props.forbidDrag},
-    canDrag: props => !props.forbidDrag,
-    beginDrag: (props, monitor, conponent) => {
-      console.log('beginDrag------', props, monitor, conponent)
-      return ({nameFlag: Item})
+  const [{ isDragging }, drag] = useDrag({
+    item: {
+      type: ItemTypes[itemTypes],
+      ...item
     },
-    endDrag(props, monitor) {
-      // const item = monitor.getItem()
+    canDrag: () => !forbidDrag,
+    end(props, monitor) {
       const dropResult = monitor.getDropResult()
-      console.log('000000',dropResult, props)
-      console.log(props.dragHandle)
       if (dropResult) {
-        props.dragHandle(props.item)
-        // alert(`You dropped ${item.name} into ${dropResult.name}!`)
+        dragHandle(null, item)
       }
-      // props.setPage({leftToMiddleHoverIndex: undefined})
+
+      setPage({leftToMiddleHoverIndex: undefined})
     },
-  },
-  (connect, monitor) => ({
-    connectDragSource: connect.dragSource(),
-    isDragging: monitor.isDragging(),
-  }),
-)(Item)
+    collect: (monitor) => ({
+      isDragging: monitor.isDragging(),
+    })
+  })
+
+  const style = isDragging ? {
+    border: '1px #3F94FC solid',
+    opacity: 0.4
+  } : {
+    border: '1px transparent solid',
+    opacity: 1
+  }
+
+  let dom = !forbidDrag ?
+    <div onClick={(e) => dragHandle(e, item)}>
+      <div ref={drag} style={{ ...style, cursor: 'move' }} className="source__box">
+
+        <div className="source__box__hover"></div>
+
+        <PictureModule item={item} />
+
+      </div>
+    </div> :
+    <div className="source__box" onMouseDown={(e) => {
+      e.preventDefault()
+    }}>
+        <PictureModule item={item} />
+    </div>
+
+  return dom
+}
+
+export default Item

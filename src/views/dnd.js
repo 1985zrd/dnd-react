@@ -1,8 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Left from '@/components/Left/Left'
-import Right from '@/components/Right/Right'
+import Right from '@/components/RightTemplate/RightTemplate'
 import Center from '@/components/Center/Center'
+
+import {useDispatch, useMappedState} from 'redux-react-hook';
+import { getAllTemplateInfo } from 'store/actions/create-page.js'
+
+import componentsData from 'utils/template.js'
 
 import { DndProvider } from 'react-dnd'
 
@@ -46,48 +51,50 @@ let tem = {
 function Dnd () {
   let [pageConponent, setPageConponent] = useState([])
 
+  // 从store中读取dispatch
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllTemplateInfo())
+  }, [dispatch])
+
   const dragHandle = (item) => {
     setPageConponent([...pageConponent, item])
   }
-  const sortPageComponent = (dragIndex, hoverIndex, item, parentIndex) => {
-    if (item.type !== 'CARD' && item.type !== 'MoveItem') {
-      let origin = JSON.parse(JSON.stringify(pageConponent[parentIndex]))
-      let data = [...origin.child]
-      let s = data.splice(dragIndex, 1)
-      data.splice(hoverIndex, 0, ...s)
-      origin.child = data
-      console.log(data)
-      let pageComponentCopy1 = [...pageConponent]
-      pageComponentCopy1.splice(parentIndex, 1, origin)
-      setPageConponent(pageComponentCopy1)
-    } else {
-      if(dragIndex === undefined || hoverIndex === undefined) {
-        return
-      }
-      let pageComponentCopy = [...pageConponent]
-      let cutItem = pageComponentCopy.splice(dragIndex, 1)
-      pageComponentCopy.splice(hoverIndex, 0, ...cutItem)
-      setPageConponent(pageComponentCopy)
-    }
-  }
+  // const sortPageComponent = (dragIndex, hoverIndex, item, parentIndex) => {
+  //   if (item.type !== 'CARD' && item.type !== 'MoveItem') {
+  //     let origin = JSON.parse(JSON.stringify(pageConponent[parentIndex]))
+  //     let data = [...origin.child]
+  //     let s = data.splice(dragIndex, 1)
+  //     data.splice(hoverIndex, 0, ...s)
+  //     origin.child = data
+  //     console.log(data)
+  //     let pageComponentCopy1 = [...pageConponent]
+  //     pageComponentCopy1.splice(parentIndex, 1, origin)
+  //     setPageConponent(pageComponentCopy1)
+  //   } else {
+  //     if(dragIndex === undefined || hoverIndex === undefined) {
+  //       return
+  //     }
+  //     let pageComponentCopy = [...pageConponent]
+  //     let cutItem = pageComponentCopy.splice(dragIndex, 1)
+  //     pageComponentCopy.splice(hoverIndex, 0, ...cutItem)
+  //     setPageConponent(pageComponentCopy)
+  //   }
+  // }
   return (
-    <div className="dnd_page">
+    <div className="create-page">
       <DndProvider backend={HTML5Backend}>
-        <Left 
-          itemTypes="CARD"
-          data={tem}
-          pageConponent={pageConponent}
-          dragHandle={dragHandle}
-        />
-        <Center 
-          itemTypes="CARD"
-          sortPageComponent={sortPageComponent}
-          data={pageConponent}
-        />
-        <Right
-          sortPageComponent={sortPageComponent}
-          data={pageConponent}
-        />
+        <div className="create-page__wrap">
+          <Left 
+            itemTypes="CARD"
+          />
+          <Center 
+            itemTypes="CARD"
+          />
+          <Right
+          />
+        </div>
       </DndProvider>
     </div>
   )

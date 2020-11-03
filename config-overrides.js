@@ -24,10 +24,16 @@ const addCustomize = () => config => {
 
 module.exports = override(
   addWebpackAlias({
-    // "http": path.resolve(__dirname, "src/http"),
-    // "assets": path.resolve(__dirname, "src/assets"),
-    // "components": path.resolve(__dirname, "src/components"),
-    // "config": path.resolve(__dirname, "src/config"),
+    "api": path.resolve(__dirname, "src/api"),
+    "assets": path.resolve(__dirname, "src/assets"),
+    "containers": path.resolve(__dirname, "src/containers"),
+    "menu": path.resolve(__dirname, "src/menu"),
+    "pages": path.resolve(__dirname, "src/pages"),
+    "presentational": path.resolve(__dirname, "src/presentational"),
+    "routes": path.resolve(__dirname, "src/routes"),
+    "store": path.resolve(__dirname, "src/store"),
+    "utils": path.resolve(__dirname, "src/utils"),
+    "components": path.resolve(__dirname, "src/components"),
     "@": path.resolve(__dirname, "src")
   }),
   // addPostcssPlugins([require('postcss-pxtorem')({
@@ -39,9 +45,9 @@ module.exports = override(
     // libraryName: 'antd-mobile',
     style: 'less'
   }),
-  // addLessLoader({
-  //   javascriptEnabled: true, // modifyVars: { "@primary-color": "#1DA57A" }
-  // }),
+  addLessLoader({
+    javascriptEnabled: true, // modifyVars: { "@primary-color": "#1DA57A" }
+  }),
   addCustomize(),
   // rewireLess.withLoaderOptions({
   //   modifyVars: { "@primary-color": "#1DA57A" },

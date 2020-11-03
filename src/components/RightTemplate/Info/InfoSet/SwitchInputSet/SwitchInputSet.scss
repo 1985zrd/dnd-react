@@ -1,0 +1,22 @@
+.drag__title {
+  &__target {
+    visibility: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 1;
+    width: 20px;
+    margin-right: 6px;
+    height: 40px;
+    cursor: move;
+    background:  url(../../../../../assets/imgs/common/icon_henghua.png) no-repeat center center;
+    background-size: 20px;
+  }
+  &:hover {
+    background-color: #F3F5F8;
+    cursor: pointer;
+    user-select: none;
+    .drag__title__target {
+      visibility: visible;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="130px" height="130px" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>tupian_44</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="130" height="130" rx="4"></rect>
+    </defs>
+    <g id="tupian_44" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#F2F3F5" xlink:href="#path-1"></use>
+            <g id="编组-2" mask="url(#mask-2)" fill="#FFFFFF" opacity="0.843866257">
+                <g transform="translate(35.000000, 44.000000)">
+                    <path d="M18.4249218,31.9093421 L34.0526901,7.72981688 C34.6522672,6.80214182 35.8903498,6.53616591 36.8180248,7.13574306 C37.0558775,7.28947256 37.2583692,7.49196423 37.4120987,7.72981688 L57.005688,38.0453219 C57.6052651,38.972997 57.3392892,40.2110795 56.4116142,40.8106567 C56.088129,41.0197324 55.7111529,41.1309524 55.3259837,41.1309524 L12.4647887,41.1309524 L12.5336278,41.0244435 L3.57191534,41.0244435 C2.46734584,41.0244435 1.57191534,40.129013 1.57191534,39.0244435 C1.57191534,38.655492 1.67397321,38.2937309 1.86679926,37.9791784 L10.6355792,23.6748768 C11.2128632,22.7331672 12.4442508,22.4377418 13.3859604,23.0150258 C13.6904203,23.201665 13.9393544,23.4664198 14.1069037,23.7817882 L18.4249218,31.9093421 Z" id="Path"></path>
+                    <circle id="Oval" cx="5" cy="5" r="5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

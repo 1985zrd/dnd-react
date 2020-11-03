@@ -1,0 +1,88 @@
+.commodity-module {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 16px 9px 13px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 194px;
+  /* background-color: #fff;*/
+  border-radius: 4px;
+  margin-bottom: 16px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  &__img {
+    width: 130px;
+    height: 130px;
+    & > img {
+      border-radius: 4px;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
+  }
+  &__right {
+    width: 177px;
+    font-family: PingFangSC;
+    .right__top{
+      height: 98px;
+      word-wrap:break-word;
+      &__title {
+        font-size: 16px;
+        color: rgba(42, 40, 39, 1);
+        line-height: 22px;
+        display:-webkit-box;
+        -webkit-box-orient:vertical;
+        -webkit-line-clamp:2;
+        overflow:hidden;
+      }
+      &__description {
+        font-weight: normal;
+        height: 54px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        color: rgba(131, 129, 127, 1);
+        line-height: 18px;
+        display:-webkit-box;
+        -webkit-box-orient:vertical;
+        -webkit-line-clamp:3;
+        overflow:hidden;
+      }
+    }
+
+    &__price {
+      margin-top: 6px;
+      width: 8px;
+      height: 21px;
+      font-size: 12px;
+      font-family: PingFangSC;
+      font-weight: 400;
+      color: rgba(253, 146, 56, 1);
+      line-height: 21px;
+    }
+    .price-higher {
+      width: 35px;
+      font-size: 18px;
+      font-family: DINAlternate;
+      font-weight: bold;
+      line-height: 21px;
+    }
+    .price-delete {
+      text-decoration: line-through;
+      margin-left: 8px;
+      width: 49px;
+      height: 14px;
+      font-size: 10px;
+      font-family: PingFangSC;
+      font-weight: 400;
+      color: rgba(163, 163, 163, 1);
+      line-height: 14px;
+    }
+    &__btn {
+      margin-top: 11px;
+      min-width: 120px;
+      border: none !important;
+      height: 32px;
+    }
+  }
+}

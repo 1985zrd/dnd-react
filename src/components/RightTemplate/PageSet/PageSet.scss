@@ -1,0 +1,106 @@
+.page-set {
+  width: 100%;
+  height: 100%;
+  padding: 0px 15px;
+  &__input {
+    &--error {
+      input {
+        border: 1px solid #FF3B30;
+      }
+    }
+    &__mes {
+      font-size:13px;
+      font-family: PingFangSC;
+      color: #FF3B30;
+      line-height:18px;
+    }
+  }
+  &__title {
+    font-family: PingFangSC;
+    padding-bottom: 10px;
+    &__switch {
+      width: 100%;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: rgba(119, 126, 140, 1);
+      line-height: 44px;
+      .num {
+        margin-left: 6px;
+        font-size: 13px;
+        color: rgba(196, 194, 192, 1);
+        line-height: 18px;
+      }
+      .icon {
+        margin-left: 1px;
+        width: 12px;
+        height: 12px;
+        margin-top: -3px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+    &__input {
+      height: 32px;
+      font-size: 14px;
+      color: rgba(56, 75, 91, 1);
+      line-height: 32px;
+    }
+    &__text-area {
+      height: 96px !important;
+      font-size: 14px;
+      color: rgba(174, 174, 174, 1);
+      line-height: 20px;
+    }
+
+  }
+  &__modal {
+    &__p {
+      text-indent: 25px
+    }
+    &--down {
+      position: relative;
+      &--text {
+        position: absolute;
+        left: 90px;
+        top: 8px;
+        &--title {
+          height:20px;
+          font-size:14px;
+          font-family:PingFangSC;
+          color:rgba(255,255,255,1);
+          line-height:20px;
+          color: #FFFFFF;
+        }
+        &--subtitle {
+          height:14px;
+          font-size:10px;
+          font-family:PingFangSC;
+          color:rgba(255,255,255,1);
+          line-height:14px;
+          color: #FFFFFF;
+        }
+      }
+    }
+    &__img {
+      margin-left: 25px;
+      margin-bottom: 80px;
+    }
+  }
+
+  //input 样式
+  /*.ant-input:hover {
+    border-color: rgba(212, 214, 217, 1);
+  }*/
+  /* .ant-input:focus {
+     border-color: rgba(212, 214, 217, 1);
+   }*/
+  .ant-switch-checked {
+    background-color: #4CD964 !important;
+  }
+  .ant-switch {
+    background-color: #E1E0DF;
+  }
+}

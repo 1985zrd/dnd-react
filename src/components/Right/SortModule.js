@@ -15,6 +15,7 @@ const SortModule = ({ data, type, id, index, moveCard, sortPageComponent, childr
       if (dragIndex === hoverIndex) {
         return
       }
+      console.log(dragRef.current.getBoundingClientRect())
       setToTop(dragIndex > hoverIndex)
     },
     drop(item, monitor) {

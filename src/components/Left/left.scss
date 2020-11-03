@@ -1,0 +1,91 @@
+.left-create-page {
+  position: relative;
+  .template-left {
+    width: 208px;
+    //height: 775px;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    background-color: #FCFDFF;
+    // background-color: #D3D6DF;
+    padding: 6px 24px 6px 24px;
+    font-family: PingFangSC;
+    &__top {
+      margin-bottom: 11px;
+      white-space: nowrap;
+      &__xls {
+        display: inline-block;
+        width: 28px;
+        height: 20px;
+        font-size: 14px;
+        color: rgba(56, 75, 91, 1);
+        line-height: 20px;
+      }
+      &__allocation {
+        margin-left: 10px;
+        display: inline-block;
+        //width: 65px;
+        height: 18px;
+        font-size: 13px;
+        color: rgba(119, 126, 140, 1);
+        line-height: 18px;
+      }
+    }
+  }
+  .template-hide {
+    animation: myclose .4s ease-in-out;
+    -webkit-animation: myclose .4s ease-in-out;
+  }
+  .template-open {
+    animation: myopen .4s ease-in-out;
+    -webkit-animation: myopen .4s ease-in-out;
+    opacity: 0;
+    width: 0px;
+    overflow: hidden;
+    padding-top: 6px;
+    padding: 0;
+  }
+  .on-off {
+    cursor: pointer;
+    width: 23px;
+    height: 98px;
+    //background: rgba(240, 243, 250, 1);
+    border-radius: 0px 4px 4px 0px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(100%);
+    & > img {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @keyframes myclose {
+    to {
+      opacity: 1;
+      width: 208px;
+    }
+    from {
+      opacity: 0;
+      width: 0px;
+      overflow: hidden;
+      padding: 0;
+    }
+  }
+  @keyframes myopen {
+    to {
+      opacity: 0;
+      width: 0px;
+      padding: 0;
+    }
+    from {
+      opacity: 1;
+      width: 208px;
+    }
+  }
+}
+.ant-select-selection__clear{
+  width: 14px !important;
+  height: 14px !important;
+}

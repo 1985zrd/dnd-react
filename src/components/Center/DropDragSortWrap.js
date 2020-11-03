@@ -38,7 +38,7 @@ const Card = React.forwardRef(
     //     borderRight: isOver ? '2px solid #3F94FC': 'none'
     //   }
     // }
-
+    console.log(props.itemTypes)
     // console.log('item.templateType , isChild, parentIndex', item.templateType, isChild, parentIndex)
     return (
       <div style={{ ...style}}
@@ -52,6 +52,7 @@ const Card = React.forwardRef(
         {/*gong-ge__inline__box 是宫格模式宽度需要设置*/}
         {/*com__box--child 是子组件z-index需要设置和组件间距需要的margin*/}
         {/*com__box--child--active 是宫格模式选中的子组件z-index 应该与同级组件中的高*/}
+        {props.itemTypes}11111111111
         <div ref={elementRef} className="drag__box" style={{ opacity, cursor }}>
           <p>{ data.message }</p>
           {children}
@@ -64,8 +65,8 @@ const Card = React.forwardRef(
 export default  DropTarget(
   // ItemTypes.MIDDLE_SORT,
   props => {
-    const itemTypes = props.itemTypes === 'CHILD' ? 'CHILD' + props.parentIndex : ItemTypes[props.itemTypes]
-    return itemTypes
+    // const itemTypes = props.itemTypes === 'CHILD' ? 'CHILD' + props.parentIndex : ItemTypes[props.itemTypes]
+    return props.itemTypes
   },
   {
     hover(props, monitor, component) {
@@ -147,8 +148,8 @@ export default  DropTarget(
   DragSource(
     // ItemTypes.MIDDLE_SORT,
     props => {
-      const itemTypes = props.itemTypes === 'CHILD' ? 'CHILD' + props.parentIndex : ItemTypes[props.itemTypes]
-      return itemTypes
+      // const itemTypes = props.itemTypes === 'CHILD' ? 'CHILD' + props.parentIndex : ItemTypes[props.itemTypes]
+      return props.itemTypes
     },
     {
       beginDrag: props => ({

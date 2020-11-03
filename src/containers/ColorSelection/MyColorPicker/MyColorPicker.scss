@@ -1,0 +1,54 @@
+.color__selection {
+  width: 222px;
+  height: 263px;
+  border: 1px solid #E1E0DF;
+  padding: 8px;
+  box-sizing: border-box;
+  background: #fff;
+  overflow: hidden;
+  box-shadow:0px 4px 20px 0px rgba(0,0,0,0.1);
+  &__top {
+    width: 100%;
+    display: flex;
+    margin-bottom: 8px;
+  }
+  &__hue-modal {
+    position: relative;
+    width: 25px;
+    height: 177px;
+    &__custom-pointer {
+      width: 25px;
+      height: 2px;
+      background: #fff;
+    }
+  }
+  &__sa-modal {
+    position: relative;
+    width: 177px;
+    height: 177px;
+    margin-right: 8px;
+    &__custom-pointer{
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+    }
+  }
+  &__square {
+    position: relative;
+    width: 300px;
+    height: 60px;
+    &__items {
+      display: inline-block;
+      width:20px;
+      height:20px;
+      margin-right: 6px;
+      cursor: pointer;
+      transition: .2s;
+    }
+  }
+}
+
+
+
+

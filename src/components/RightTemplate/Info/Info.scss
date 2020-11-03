@@ -1,0 +1,91 @@
+.coupon-deploy {
+  width: 100%;
+  // height: 650px;
+  background-color: #FCFDFF;
+  font-family: PingFangSC;
+  display: block;
+  overflow-y: scroll;
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .title-style {
+    font-size: 13px;
+    color: rgba(119, 126, 140, 1);
+    line-height: 18px;
+  }
+  &__background {
+    margin: 0px 16px;
+    height: 50px;
+    &__color {
+      width: 100px;
+      height: 24px;
+      background: rgba(255, 255, 255, 1);
+      border-radius: 2px;
+      border: 1px solid rgba(225, 224, 223, 1);
+    }
+  }
+  &__title {
+    width: 100%;
+    height: 44px;
+    background-color: #F3F5F8;
+    cursor: pointer;
+    user-select: none;
+    &__icon {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+    }
+  }
+  .num {
+    margin-left: 6px;
+    font-size: 13px;
+    color: rgba(196, 194, 192, 1);
+    line-height: 18px;
+  }
+  .wrap-padding {
+    padding: 0 16px;
+  }
+  .title-switch {
+    height: 44px;
+  }
+
+  .title-set {
+    padding: 0 16px;
+    &__input {
+      margin: 9px 0px;
+      height: 32px;
+      background: rgba(255, 255, 255, 1);
+      border-radius: 4px;
+      border: 1px solid rgba(212, 214, 217, 1);
+      font-size: 14px;
+      line-height: 32px;
+    }
+    &__title {
+      height: 50px;
+      &__color {
+        width: 100px;
+        height: 24px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 2px;
+        border: 1px solid rgba(225, 224, 223, 1);
+      }
+    }
+    &__text-area {
+      margin: 9px 0px;
+      height: 96px !important;
+      background: rgba(255, 255, 255, 1);
+      border-radius: 4px;
+      border: 1px solid rgba(212, 214, 217, 1);
+    }
+  }
+
+  //input 样式
+  .ant-switch-checked {
+    background-color: #4CD964 !important;
+  }
+  .ant-switch {
+    background-color: #E1E0DF;
+  }
+}

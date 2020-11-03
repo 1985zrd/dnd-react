@@ -1,0 +1,150 @@
+.right-template {
+  width: 300px;
+  min-width: 300px;
+  //height: 775px;
+  height: 100%;
+  background-color: #FCFDFF;
+  &__btns {
+    padding: 12px 16px 21px 16px;
+    display: flex;
+    justify-content: space-between;
+    & > Button {
+      width: 64px;
+      height: 32px;
+      font-size: 12px;
+      text-align: center;
+      padding: 0;
+    }
+
+  }
+  &__wrap {
+    overflow: auto;
+  }
+  &__empty-data{
+    text-align: center;
+    margin: 100px auto 340px;
+    color: #AEAEAE;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: PingFangSC;
+    margin-top: 14px;
+  }
+
+  //tab 样式重置
+  .ant-tabs-nav .ant-tabs-tab {
+    margin-right: 18px;
+  }
+  .ant-tabs-ink-bar {
+    width: 28px !important;
+    margin-left: 30px;
+  }
+  .ant-tabs-bar {
+    margin-bottom: 12px;
+  }
+}
+
+
+.preview__title {
+  padding-top: 6px;
+  display: flex;
+  align-items: center;
+  .sub--title {
+    font-size: 12px;
+    color: #777E8C;
+    padding-left: 8px;
+  }
+}
+
+.set-padding-b {
+  padding-bottom: 30px;
+}
+
+.qr__preview {
+  text-align: center;
+  &__img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 13px;
+    margin-top: 10px;
+  }
+  p{
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  &--url {
+    padding-bottom: 61px;
+    &--copy {
+      color: #3f94fc;
+      padding-left: 12px;
+      cursor: pointer;
+    }
+  }
+}
+
+.copy-btn {
+  display: inline-block;
+  color: #3f94fc;
+  padding-left: 12px;
+  cursor: pointer;
+}
+
+.base-modal {
+  .ant-modal-content {
+    width: auto!important;
+  }
+  .base-modal-wrap {
+    padding-bottom: 32px;
+  }
+  &__title {
+    position: relative;
+    line-height: 45px;
+    font-weight: bold;
+    font-size: 16px;
+    i {
+      color: #faad14;
+      font-size: 22px;
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      left: -32px;
+      top: 12px;
+    }
+    // i {
+    //   position: absolute;
+    //   width: 45px;
+    //   height: 45px;
+    //   left: -40px;
+    //   top: 0;
+    //   background: url(../../../assets/images/icon_tips.png) no-repeat center center;
+    //   background-size: 20px;
+    // }
+  }
+  &__content {
+    &__color {
+      color: red;
+    }
+  }
+  &__footer {
+    padding-top: 10px;
+    text-align: right;
+  }
+}
+
+// 解决滚出可视区 覆盖页面的问题, 下拉框内容滚动z-index 太高
+.right-template__btns,     .header,    .ant-tabs-nav-wrap {
+  position: relative;
+  z-index: 1000;
+  background: #FCFDFF;
+}
+
+.header{
+  background: #f7fafc;
+}
+
+// 下拉框z-index的下调，解决滚出可视区 覆盖页面的问题
+.relativeGuy {
+  .ant-select-dropdown{
+    z-index: 999;
+  }
+}
+

@@ -17,3 +17,14 @@ html, body, #root {
   border-left: 1px solid #e5e5e5;
   border-right: 1px solid #e5e5e5;
 }
+
+.create-page {
+  background: #fff;
+  height: 100%;
+  //padding-bottom: 24px;
+  &__wrap {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+  }
+}

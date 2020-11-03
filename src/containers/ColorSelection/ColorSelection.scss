@@ -1,0 +1,57 @@
+.color-wrap {
+  font-family: PingFangSC;
+  position: relative;
+
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  &__input {
+    width: 100px !important;
+    height: 24px !important;
+    color: rgba(119, 126, 140, 1);
+    line-height: 24px;
+    display: inline-block;
+
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    & > input {
+      width: 100%;
+      height: 100%;
+      font-size: 13px;
+      border-radius: 2px;
+      border: 1px solid rgba(225, 224, 223, 1);
+    }
+    &__btn {
+      width: 14px;
+      height: 14px;
+      border: 1px solid rgba(225, 224, 223, 1);
+      cursor: pointer;
+    }
+  }
+  &__location {
+    position: absolute;
+    right: 0;
+    z-index: 99999;
+  }
+  .ant-input-affix-wrapper .ant-input-suffix {
+    right: 6px;
+  }
+  .ant-input-affix-wrapper .ant-input:not(:last-child) {
+    padding-right: 18px;
+    -webkit-touch-callout: none !important; /* iOS Safari */
+    -webkit-user-select: none !important; /* Chrome/Safari/Opera */
+    -khtml-user-select: none !important; /* Konqueror */
+    -moz-user-select: none !important; /* Firefox */
+    -ms-user-select: none !important; /* Internet Explorer/Edge */
+    user-select: none !important; /* Non-prefixed version, currently
+      not supported by any browser */
+
+  }
+}
